@@ -8,8 +8,8 @@ crossPlatformShapes.pathCalculator.arc = function(data){
 
   var yControlPoint = (height * (2/3);
 
-  var pathData = [{command: 'moveTo', points: [x, y-0.5*height]},
-    {command: 'bezierCurveTo', points: [(x), (y-0.5*height + yControlPoint), (x + width), (y-0.5*height + yControlPoint), (x + width), (y-0.5*height)]}];
+  var pathData = [{command: 'moveTo', points: [x, y]},
+    {command: 'bezierCurveTo', points: [(x), (y + yControlPoint), (x + width), (y + yControlPoint), (x + width), (y)]}];
 
   return pathData;
 };
